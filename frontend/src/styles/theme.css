@@ -1,0 +1,25 @@
+/* src/styles/theme.css */
+
+:root {
+  --bg-space: #0a0a1a;
+  --primary: #7c3aed;
+  --accent: #fbbf24;
+  --pink: #ec4899;
+  --text: #f8fafc;
+
+  --primary-glow: rgba(124, 58, 237, 0.4);
+  --pink-glow: rgba(236, 72, 153, 0.4);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--bg-space);
+  color: var(--text);
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  overflow-x: hidden;
+}
