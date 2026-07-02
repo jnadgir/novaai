@@ -1,0 +1,60 @@
+.history-page {
+  position: relative;
+  min-height: 100vh;
+  padding: 3rem 2rem;
+}
+
+.history-container {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.history-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.history-header h1 {
+  font-family: 'Orbitron', sans-serif;
+}
+
+.history-empty {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: var(--card, rgba(124, 58, 237, 0.08));
+  border: 1px solid var(--border, rgba(124, 58, 237, 0.2));
+  border-radius: 16px;
+}
+
+.history-empty p {
+  color: #94a3b8;
+  margin-bottom: 1.5rem;
+}
+
+.history-messages {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.history-messages .message {
+  display: flex;
+  gap: 0.75rem;
+  background: var(--card, rgba(124, 58, 237, 0.08));
+  border: 1px solid var(--border, rgba(124, 58, 237, 0.2));
+  border-radius: 12px;
+  padding: 1rem;
+}
+
+.history-messages .message-avatar {
+  font-size: 1.25rem;
+  flex-shrink: 0;
+}
+
+.history-messages .message-content {
+  line-height: 1.6;
+}

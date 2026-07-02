@@ -1,5 +1,7 @@
 /* src/styles/theme.css */
 
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;600&display=swap');
+
 :root {
   --bg-space: #0a0a1a;
   --primary: #7c3aed;
@@ -7,8 +9,15 @@
   --pink: #ec4899;
   --text: #f8fafc;
 
+  --card: rgba(255, 255, 255, 0.05);
+  --border: rgba(255, 255, 255, 0.1);
+
   --primary-glow: rgba(124, 58, 237, 0.4);
   --pink-glow: rgba(236, 72, 153, 0.4);
+
+  --font-heading: 'Orbitron', sans-serif;
+  --font-body: 'Rajdhani', sans-serif;
+  --font-mono: 'Space Mono', monospace;
 }
 
 * {
@@ -20,6 +29,11 @@
 body {
   background: var(--bg-space);
   color: var(--text);
-  font-family: 'Inter', 'Segoe UI', sans-serif;
+  font-family: var(--font-body);
+  min-height: 100vh;
   overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
 }
