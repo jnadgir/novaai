@@ -24,8 +24,17 @@
     radial-gradient(2px 2px at 60% 90%, white, transparent),
     radial-gradient(2px 2px at 35% 80%, white, transparent);
   background-size: 350px 350px;
-  opacity: 0.6;
   z-index: 0;
+  animation: twinkle 4s ease-in-out infinite;
+}
+
+@keyframes twinkle {
+  0%, 100% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 0.85;
+  }
 }
 
 .hero {
