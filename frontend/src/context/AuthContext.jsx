@@ -6,6 +6,7 @@ const AuthContext = createContext();
 export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [loggedIn, setLoggedIn] = useState(false);
+  const [authLoading, setAuthLoading] = useState(true);
 
   useEffect(() => {
     const sessionUser = getSession();
@@ -13,6 +14,7 @@ export const AuthProvider = ({ children }) => {
       setUser(sessionUser);
       setLoggedIn(true);
     }
+    setAuthLoading(false);
   }, []);
 
   const signup = (userData) => {
@@ -48,7 +50,7 @@ export const AuthProvider = ({ children }) => {
   };
 
   return (
-    <AuthContext.Provider value={{ user, loggedIn, signup, login, logout, updateUser, deleteMyAccount }}>
+    <AuthContext.Provider value={{ user, loggedIn, authLoading, signup, login, logout, updateUser, deleteMyAccount }}>
       {children}
     </AuthContext.Provider>
   );

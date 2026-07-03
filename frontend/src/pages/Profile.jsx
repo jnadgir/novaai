@@ -20,11 +20,9 @@ function Profile() {
   const [showDeleteConfirm, setShowDeleteConfirm] = useState(false);
 
   const handleSaveProfile = () => {
-    updateUser({ name, instructions, apiKey });
-    setMessage('✅ Profile updated!');
-    setError('');
-    setTimeout(() => setMessage(''), 3000);
-  };
+  updateUser({ name, instructions, apiKey });
+  navigate('/assistant');
+};
 
   const handleChangePassword = () => {
     setError('');
